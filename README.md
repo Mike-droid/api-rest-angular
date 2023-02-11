@@ -10,6 +10,18 @@
 
 Vamos a aprender a usar el módulo de Angular Http
 
+### Solucitides GET
+
+GET sirve para obtener información.
+
+Usaremos [Fake API](https://young-sands-07814.herokuapp.com/docs)
+
+Para poder hacer peticiones HTTP en angular, tenemos que impotar el módulo en app.module.ts:
+
+`import { HttpClientModule } from '@angular/common/http';`
+
+Después tenemos que crear un servicio para manejar estas peticiones. Por ejemplo está el archivo products.service.ts
+
 ## Buenas prácticas
 
 ## Auth
