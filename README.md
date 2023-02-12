@@ -22,6 +22,10 @@ Para poder hacer peticiones HTTP en angular, tenemos que impotar el módulo en a
 
 Después tenemos que crear un servicio para manejar estas peticiones. Por ejemplo está el archivo products.service.ts
 
+### Detalle del producto
+
+Usamos el output para mandarle información del componente hijo al padre y que muestre la información cuando hacemos click en el botón del componente hijo.
+
 ## Buenas prácticas
 
 ## Auth

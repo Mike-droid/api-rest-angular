@@ -22,11 +22,14 @@ export class ProductComponent {
   };
 
   @Output() addedProduct = new EventEmitter<Product>();
-
-  constructor() { }
+  @Output() showProduct = new EventEmitter<string>(); // el string es por el Product.id
 
   onAddToCart() {
     this.addedProduct.emit(this.product);
+  }
+
+  showDetail() {
+    this.showProduct.emit(this.product.id);
   }
 
 }
