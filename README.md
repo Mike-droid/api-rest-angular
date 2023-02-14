@@ -40,6 +40,8 @@ No necesariamente vamos a utilizar el método POST con las interfaces definidas 
 
 ### Solicitudes DELETE
 
+### Url Parameters / Paginación
+
 ## Buenas prácticas
 
 ## Auth
