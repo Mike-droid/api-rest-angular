@@ -17,3 +17,6 @@ export interface CreateProductDTO extends Omit<Product, 'id' | 'category'> {
   //* Nos traemos todos los campos, excepto el ID y la category
   categoryId: number;
 }
+
+export interface UpdateProductDTO extends Partial<CreateProductDTO> {}
+//* Todos los atributos son opcionales

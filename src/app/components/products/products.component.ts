@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Product, CreateProductDTO } from '../../models/product.model';
+import { Product, CreateProductDTO, UpdateProductDTO } from '../../models/product.model';
 
 import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
@@ -16,6 +16,8 @@ export class ProductsComponent implements OnInit {
   total = 0;
   products: Product[] = [];
   showProductDetail = false;
+
+  //* es el producto que se muestra en grande cuando presionamos en 'ver detalle'
   chosenProduct: Product = {
     id: '',
     title: '',
@@ -70,6 +72,19 @@ export class ProductsComponent implements OnInit {
     this.productsService.create(product).subscribe(data => {
       console.log('created!', data);
       this.products.unshift(data);
+    })
+  }
+
+  updateProduct() {
+    const changes: UpdateProductDTO = {
+      title: 'super new title'
+    }
+    const id = this.chosenProduct.id
+
+    this.productsService.update(id, changes).subscribe(data => {
+      const productIndex = this.products.findIndex(item => item.id === this.chosenProduct.id);
+      this.products[productIndex] = data;
+      this.chosenProduct = data;
     })
   }
 

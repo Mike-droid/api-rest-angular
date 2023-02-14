@@ -36,6 +36,8 @@ Nota importante: *los verbos HTTP tienen un return porque el objetivo es utiliza
 
 No necesariamente vamos a utilizar el método POST con las interfaces definidas en nuestro código en TypeScript. Debemos hacer ciertas modificaciones. Para esto están los [DTOs o Data Transfer Objects](https://www.arquitecturajava.com/typescript-interface-y-angular-dtos/)
 
+### Solicitudes PUT y PATCH
+
 ## Buenas prácticas
 
 ## Auth
