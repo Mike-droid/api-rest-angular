@@ -96,6 +96,10 @@ const doSomething$ = () => {
 
 ```
 
+### Reintentar una petición
+
+Basta con usar `import { retry } from 'rxjs/operators';`
+
 ## Buenas prácticas
 
 ## Auth
