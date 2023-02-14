@@ -31,4 +31,8 @@ export class ProductsService {
     //* PUT: enviar toda la información
     //* PATCH: enviar solo la información modificada
   }
+
+  delete(id: string) {
+    return this.http.delete<boolean>(`${this.apiUrl}/${id}`);
+  }
 }

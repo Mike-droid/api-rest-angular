@@ -38,6 +38,8 @@ No necesariamente vamos a utilizar el método POST con las interfaces definidas 
 
 ### Solicitudes PUT y PATCH
 
+### Solicitudes DELETE
+
 ## Buenas prácticas
 
 ## Auth

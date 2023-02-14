@@ -70,7 +70,6 @@ export class ProductsComponent implements OnInit {
     };
 
     this.productsService.create(product).subscribe(data => {
-      console.log('created!', data);
       this.products.unshift(data);
     })
   }
@@ -85,6 +84,15 @@ export class ProductsComponent implements OnInit {
       const productIndex = this.products.findIndex(item => item.id === this.chosenProduct.id);
       this.products[productIndex] = data;
       this.chosenProduct = data;
+    })
+  }
+
+  deleteProduct() {
+    const id = this.chosenProduct.id;
+    this.productsService.delete(id).subscribe(() => {
+      const productIndex = this.products.findIndex(item => item.id === this.chosenProduct.id);
+      this.products.splice(productIndex, 1);
+      this.showProductDetail = false;
     })
   }
 
