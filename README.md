@@ -30,6 +30,12 @@ Usamos el output para mandarle información del componente hijo al padre y que m
 
 Utilizaremos [Swiper JS](https://swiperjs.com/angular)
 
+### Solicitudes POST
+
+Nota importante: *los verbos HTTP tienen un return porque el objetivo es utilizar el método subscribe para obtener la información*
+
+No necesariamente vamos a utilizar el método POST con las interfaces definidas en nuestro código en TypeScript. Debemos hacer ciertas modificaciones. Para esto están los [DTOs o Data Transfer Objects](https://www.arquitecturajava.com/typescript-interface-y-angular-dtos/)
+
 ## Buenas prácticas
 
 ## Auth
