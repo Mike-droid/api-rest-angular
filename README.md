@@ -26,6 +26,10 @@ Después tenemos que crear un servicio para manejar estas peticiones. Por ejempl
 
 Usamos el output para mandarle información del componente hijo al padre y que muestre la información cuando hacemos click en el botón del componente hijo.
 
+### Implementando slides
+
+Utilizaremos [Swiper JS](https://swiperjs.com/angular)
+
 ## Buenas prácticas
 
 ## Auth
