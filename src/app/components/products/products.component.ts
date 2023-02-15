@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { switchMap } from 'rxjs/operators';
+import { zip } from 'rxjs';
 
 import { Product, CreateProductDTO, UpdateProductDTO } from '../../models/product.model';
 
@@ -72,6 +74,22 @@ export class ProductsComponent implements OnInit {
         confirmButtonText: 'OK',
       })
     })
+  }
+
+  readAndUpdate(id: string) {
+    this.productsService.getProduct(id)
+    .pipe(
+      switchMap((product) => this.productsService.update(product.id, { title: 'another change' })),
+      /* switchMap((product) => this.productsService.update(product.id, { title: 'another change' })),
+      switchMap((product) => this.productsService.update(product.id, { title: 'another change' })),
+      switchMap((product) => this.productsService.update(product.id, { title: 'another change' })), */
+      //* Puedo agregar tantos switchMap como necesite
+    )
+    .subscribe(data => {
+      console.log(data);
+    })
+
+    this.productsService.fetchReadAndUpdate(id, {title: 'cool'})
   }
 
   createNewProduct() {
