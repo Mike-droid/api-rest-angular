@@ -102,6 +102,14 @@ Basta con usar `import { retry } from 'rxjs/operators';`
 
 ## Buenas prácticas
 
+### El problema de CORS
+
+El problema [CORS](https://developer.mozilla.org/es/docs/Web/HTTP/CORS) tiene que ver con el origen de la petición. Si es del mismo origen no hay problema, pero si el origen es distinto, surge este error.
+
+Tenemos que hacer que el *backend* acepte distintos origenes.
+
+Podemos crear un proxy en Angular **PERO** solo soluciona el error en desarrollo, no en producción.
+
 ## Auth
 
 ## Archivos
