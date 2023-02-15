@@ -121,7 +121,15 @@ Angular (en sus versiones anteriores a la 15) nos muestra una carpeta de los amb
 
 ### Transformar peticiones
 
+Es buena practicar colocar lógica de peticiones en los servicios, para que sea reutilizable, en vez de en los componentes.
+
 ## Auth
+
+### Login y manejo de Auth
+
+Vamos a utilizar [JWT](https://jwt.io/)
+
+Vamos a hacer login con el endpoint `/login` y el backend nos regresará un JWT. Este lo debemos guardar para usarlo en otras partes de nuestra app.
 
 ## Archivos
 
