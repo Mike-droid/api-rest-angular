@@ -10,6 +10,7 @@ export interface Product {
   images: string[];
   description: string;
   category: Category;
+  taxes?: number;
 }
 
 //! Interfaz exclusiva para método POST por la lógica de la API y la BBDD

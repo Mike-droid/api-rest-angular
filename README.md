@@ -119,6 +119,8 @@ Angular (en sus versiones anteriores a la 15) nos muestra una carpeta de los amb
 
 ### Manejo de errores
 
+### Transformar peticiones
+
 ## Auth
 
 ## Archivos
