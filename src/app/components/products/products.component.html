@@ -1,4 +1,5 @@
 <button (click)="createNewProduct()">CREATE PRODUCT</button>
+<button (click)="showDetail('4574684')">detalle not found</button>
 <div class="products--grid">
   <app-product
     [product]="product"
@@ -9,6 +10,7 @@
   <button (click)="loadMore()">Load more items</button>
 </div>
 <div class="product-detail" [class.active]="showProductDetail">
+  {{ statusDetail }}
   <div *ngIf="chosenProduct">
     <button (click)="toggleProductDetail()">Close</button>
     <h1>{{ chosenProduct.title }}</h1>

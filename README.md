@@ -117,6 +117,8 @@ Angular (en sus versiones anteriores a la 15) nos muestra una carpeta de los amb
 1. Desarrollo
 2. Producción (si usamos el proxy aquí, tendremos un error)
 
+### Manejo de errores
+
 ## Auth
 
 ## Archivos

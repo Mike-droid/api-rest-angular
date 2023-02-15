@@ -5,6 +5,8 @@ import { Product, CreateProductDTO, UpdateProductDTO } from '../../models/produc
 import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
 
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -33,6 +35,8 @@ export class ProductsComponent implements OnInit {
   limit = 10;
   offset = 0;
 
+  statusDetail: 'loading' | 'success' | 'error' | 'init' = 'init';
+
   constructor(
     private storeService: StoreService,
     private productsService: ProductsService
@@ -54,9 +58,19 @@ export class ProductsComponent implements OnInit {
   }
 
   showDetail(id: string) {
+    this.statusDetail = 'loading';
+    this.toggleProductDetail();
     this.productsService.getProduct(id).subscribe(data => {
-      this.toggleProductDetail();
       this.chosenProduct = data;
+      this.statusDetail = 'success';
+    }, errorMessage => {
+      this.statusDetail = 'error'; //! Esto debe estar primero para que el Swal funcione
+      Swal.fire({
+        title: 'Product not found!',
+        text: errorMessage,
+        icon: 'error',
+        confirmButtonText: 'OK',
+      })
     })
   }
 
