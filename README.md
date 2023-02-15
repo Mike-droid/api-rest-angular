@@ -110,6 +110,13 @@ Tenemos que hacer que el *backend* acepte distintos origenes.
 
 Podemos crear un proxy en Angular **PERO** solo soluciona el error en desarrollo, no en producción.
 
+### Manejo de ambientes
+
+Angular (en sus versiones anteriores a la 15) nos muestra una carpeta de los ambientes. Siempre sulene ser 2:
+
+1. Desarrollo
+2. Producción (si usamos el proxy aquí, tendremos un error)
+
 ## Auth
 
 ## Archivos
