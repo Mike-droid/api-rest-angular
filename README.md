@@ -131,6 +131,8 @@ Vamos a utilizar [JWT](https://jwt.io/)
 
 Vamos a hacer login con el endpoint `/login` y el backend nos regresará un JWT. Este lo debemos guardar para usarlo en otras partes de nuestra app.
 
+### Manejo de headers
+
 ## Archivos
 
 ## Despedida
