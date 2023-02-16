@@ -137,6 +137,10 @@ Vamos a hacer login con el endpoint `/login` y el backend nos regresará un JWT.
 
 Usamos la Angular CLI para crear el interceptor: `ng g interceptor interceptor/time --flat`
 
+### Enviar Token con un interceptor
+
+Creamos un nuevo intercepor, esta vez para el token, con `ng g interceptor interceptor/token --flat`
+
 ## Archivos
 
 ## Despedida
