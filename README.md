@@ -133,6 +133,10 @@ Vamos a hacer login con el endpoint `/login` y el backend nos regresará un JWT.
 
 ### Manejo de headers
 
+### Uso de interceptores
+
+Usamos la Angular CLI para crear el interceptor: `ng g interceptor interceptor/time --flat`
+
 ## Archivos
 
 ## Despedida
