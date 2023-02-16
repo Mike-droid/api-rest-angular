@@ -141,6 +141,8 @@ Usamos la Angular CLI para crear el interceptor: `ng g interceptor interceptor/t
 
 Creamos un nuevo intercepor, esta vez para el token, con `ng g interceptor interceptor/token --flat`
 
+### Creando un contexto a interceptor
+
 ## Archivos
 
 ## Despedida
