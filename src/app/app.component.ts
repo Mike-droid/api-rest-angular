@@ -12,6 +12,7 @@ export class AppComponent {
   imgParent = '';
   showImg = true;
   token = '';
+  imgResponse = '';
 
   constructor(
     private usersService: UsersService,
@@ -39,5 +40,16 @@ export class AppComponent {
       'https://young-sands-07814.herokuapp.com/api/files/dummy.pdf',
       'application/pdf'
     ).subscribe()
+  }
+
+  onUpload(event: Event) {
+    const element = event.target as HTMLInputElement
+    const file = element.files?.item(0);
+    if (file) {
+      this.filesService.uploadFile(file)
+      .subscribe(response => {
+        this.imgResponse = response.location;
+      })
+    }
   }
 }
