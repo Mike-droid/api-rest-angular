@@ -145,4 +145,12 @@ Creamos un nuevo intercepor, esta vez para el token, con `ng g interceptor inter
 
 ## Archivos
 
+### Descarga de archivos con Http
+
+Creamos un servicio para los archivos: `ng g s services/files`
+
+Usaremos `npm i file-saver` y también `npm i @types/file-saver --save-dev`
+
+Nota importante: *todas las dependencias que tengan '@types' DEBEN ir en dependencias de desarrollo*.
+
 ## Despedida
